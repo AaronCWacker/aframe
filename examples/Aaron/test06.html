@@ -1,0 +1,14 @@
+<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+<script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+<body>
+  <a-scene>
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"
+             event-set__down="_event: mousedown; material.wireframe: true"
+             event-set__up="_event: mouseup; material.wireframe: false"
+             event-set__leave="_event: mouseleave; material.wireframe: false"></a-plane>
+
+    <a-camera>
+      <a-cursor></a-cursor>
+    </a-camera>
+  </a-scene>
+</body>
